@@ -46,6 +46,7 @@ Partial Class Bienvenida
         Me.ProgressBar1.Location = New System.Drawing.Point(180, 290)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(334, 23)
+        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.ProgressBar1.TabIndex = 1
         '
         'Timer1
