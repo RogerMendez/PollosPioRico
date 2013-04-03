@@ -22,6 +22,7 @@ Partial Class pollo_cambiarprecio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pollo_cambiarprecio))
         Me.SuspendLayout()
         '
         'pollo_cambiarprecio
@@ -31,6 +32,7 @@ Partial Class pollo_cambiarprecio
         Me.ClientSize = New System.Drawing.Size(516, 273)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "pollo_cambiarprecio"
         Me.Text = "MetroForm"
         Me.ResumeLayout(False)

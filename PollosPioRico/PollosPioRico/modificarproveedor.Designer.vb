@@ -23,10 +23,13 @@ Partial Class modificarproveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(modificarproveedor))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PollosDataSet = New PollosPioRico.pollosDataSet()
         Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.IntegerInput2 = New DevComponents.Editors.IntegerInput()
         Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
@@ -38,15 +41,13 @@ Partial Class modificarproveedor
         Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
         Me.TextBoxX3 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
-        Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PollosDataSet = New PollosPioRico.pollosDataSet()
         Me.ProveedorTableAdapter = New PollosPioRico.pollosDataSetTableAdapters.proveedorTableAdapter()
         Me.GroupPanel1.SuspendLayout()
+        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IntegerInput2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupPanel2.SuspendLayout()
-        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupPanel1
@@ -134,6 +135,16 @@ Partial Class modificarproveedor
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.Size = New System.Drawing.Size(228, 29)
         Me.TextBoxX2.TabIndex = 7
+        '
+        'ProveedorBindingSource
+        '
+        Me.ProveedorBindingSource.DataMember = "proveedor"
+        Me.ProveedorBindingSource.DataSource = Me.PollosDataSet
+        '
+        'PollosDataSet
+        '
+        Me.PollosDataSet.DataSetName = "pollosDataSet"
+        Me.PollosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TextBoxX1
         '
@@ -310,16 +321,6 @@ Partial Class modificarproveedor
         Me.LabelX1.TabIndex = 5
         Me.LabelX1.Text = "NIT Proveedor:"
         '
-        'ProveedorBindingSource
-        '
-        Me.ProveedorBindingSource.DataMember = "proveedor"
-        Me.ProveedorBindingSource.DataSource = Me.PollosDataSet
-        '
-        'PollosDataSet
-        '
-        Me.PollosDataSet.DataSetName = "pollosDataSet"
-        Me.PollosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ProveedorTableAdapter
         '
         Me.ProveedorTableAdapter.ClearBeforeFill = True
@@ -336,16 +337,17 @@ Partial Class modificarproveedor
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "modificarproveedor"
         Me.Text = "Modificar Proveedor"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupPanel1.ResumeLayout(False)
+        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.IntegerInput2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupPanel2.ResumeLayout(False)
-        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

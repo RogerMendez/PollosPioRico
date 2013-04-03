@@ -22,6 +22,7 @@ Partial Class Inicioform
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicioform))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,110 +42,123 @@ Partial Class Inicioform
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.MenuStrip1.Font = New System.Drawing.Font("News701 BT", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.PollosToolStripMenuItem, Me.ClienteToolStripMenuItem, Me.GastoToolStripMenuItem, Me.VentaToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(761, 29)
+        Me.MenuStrip1.Size = New System.Drawing.Size(170, 562)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem, Me.ModificarToolStripMenuItem})
+        Me.ProveedoresToolStripMenuItem.Image = Global.PollosPioRico.My.Resources.Resources.Dapino_Cute_Chicken_Chicken_egg_shell1
+        Me.ProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(109, 25)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(157, 44)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'RegistrarToolStripMenuItem
         '
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
-        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
+        Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(160, 24)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
         '
         'ModificarToolStripMenuItem
         '
         Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(146, 26)
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(160, 24)
         Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'PollosToolStripMenuItem
         '
         Me.PollosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem1, Me.CambiarPrecioKgToolStripMenuItem})
+        Me.PollosToolStripMenuItem.Image = Global.PollosPioRico.My.Resources.Resources.Dapino_Cute_Chicken_New_born_chicken
+        Me.PollosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PollosToolStripMenuItem.Name = "PollosToolStripMenuItem"
-        Me.PollosToolStripMenuItem.Size = New System.Drawing.Size(64, 25)
+        Me.PollosToolStripMenuItem.Size = New System.Drawing.Size(157, 44)
         Me.PollosToolStripMenuItem.Text = "Pollos"
         '
         'RegistrarToolStripMenuItem1
         '
         Me.RegistrarToolStripMenuItem1.Name = "RegistrarToolStripMenuItem1"
-        Me.RegistrarToolStripMenuItem1.Size = New System.Drawing.Size(210, 26)
+        Me.RegistrarToolStripMenuItem1.Size = New System.Drawing.Size(235, 24)
         Me.RegistrarToolStripMenuItem1.Text = "Registrar"
         '
         'CambiarPrecioKgToolStripMenuItem
         '
         Me.CambiarPrecioKgToolStripMenuItem.Name = "CambiarPrecioKgToolStripMenuItem"
-        Me.CambiarPrecioKgToolStripMenuItem.Size = New System.Drawing.Size(210, 26)
+        Me.CambiarPrecioKgToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
         Me.CambiarPrecioKgToolStripMenuItem.Text = "Cambiar Precio kg."
         '
         'ClienteToolStripMenuItem
         '
         Me.ClienteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarToolStripMenuItem2})
+        Me.ClienteToolStripMenuItem.Image = Global.PollosPioRico.My.Resources.Resources.Dapino_Cute_Chicken_Waving_chicken
+        Me.ClienteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(70, 25)
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(157, 44)
         Me.ClienteToolStripMenuItem.Text = "Cliente"
         '
         'RegistrarToolStripMenuItem2
         '
         Me.RegistrarToolStripMenuItem2.Name = "RegistrarToolStripMenuItem2"
-        Me.RegistrarToolStripMenuItem2.Size = New System.Drawing.Size(143, 26)
+        Me.RegistrarToolStripMenuItem2.Size = New System.Drawing.Size(155, 24)
         Me.RegistrarToolStripMenuItem2.Text = "Registrar"
         '
         'GastoToolStripMenuItem
         '
         Me.GastoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegstrarToolStripMenuItem})
+        Me.GastoToolStripMenuItem.Image = Global.PollosPioRico.My.Resources.Resources.Dapino_Cute_Chicken_Chicken_egg_shell_top
+        Me.GastoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.GastoToolStripMenuItem.Name = "GastoToolStripMenuItem"
-        Me.GastoToolStripMenuItem.Size = New System.Drawing.Size(62, 25)
+        Me.GastoToolStripMenuItem.Size = New System.Drawing.Size(157, 44)
         Me.GastoToolStripMenuItem.Text = "Gasto"
         '
         'RegstrarToolStripMenuItem
         '
         Me.RegstrarToolStripMenuItem.Name = "RegstrarToolStripMenuItem"
-        Me.RegstrarToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
+        Me.RegstrarToolStripMenuItem.Size = New System.Drawing.Size(155, 24)
         Me.RegstrarToolStripMenuItem.Text = "Registrar"
         '
         'VentaToolStripMenuItem
         '
+        Me.VentaToolStripMenuItem.Image = Global.PollosPioRico.My.Resources.Resources.Dapino_Cute_Chicken_Party_chicken
+        Me.VentaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(62, 25)
+        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(157, 44)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IngresosEgresosPorMesToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Image = Global.PollosPioRico.My.Resources.Resources.Dapino_Cute_Chicken_Singing_chicken
+        Me.ReportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(84, 25)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(157, 44)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'IngresosEgresosPorMesToolStripMenuItem
         '
         Me.IngresosEgresosPorMesToolStripMenuItem.Name = "IngresosEgresosPorMesToolStripMenuItem"
-        Me.IngresosEgresosPorMesToolStripMenuItem.Size = New System.Drawing.Size(278, 26)
+        Me.IngresosEgresosPorMesToolStripMenuItem.Size = New System.Drawing.Size(308, 24)
         Me.IngresosEgresosPorMesToolStripMenuItem.Text = "Ingresos - Egresos (Por Mes)"
         '
         'Inicioform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(761, 455)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Inicioform"
         Me.Text = "Inicio"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

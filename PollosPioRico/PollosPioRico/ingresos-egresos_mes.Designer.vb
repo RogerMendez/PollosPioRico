@@ -22,9 +22,9 @@ Partial Class ingresos_egresos_mes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ingresos_egresos_mes))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
-        Me.ColumnHeader1 = New DevComponents.AdvTree.ColumnHeader()
+        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.ComboBoxEx1 = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Enero = New DevComponents.Editors.ComboItem()
         Me.Febrero = New DevComponents.Editors.ComboItem()
@@ -32,24 +32,25 @@ Partial Class ingresos_egresos_mes
         Me.Abril = New DevComponents.Editors.ComboItem()
         Me.Mayo = New DevComponents.Editors.ComboItem()
         Me.Junio = New DevComponents.Editors.ComboItem()
-        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.Julio = New DevComponents.Editors.ComboItem()
         Me.Agosto = New DevComponents.Editors.ComboItem()
         Me.Septiembre = New DevComponents.Editors.ComboItem()
         Me.Octubre = New DevComponents.Editors.ComboItem()
         Me.Noviembre = New DevComponents.Editors.ComboItem()
         Me.Diciembre = New DevComponents.Editors.ComboItem()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
+        Me.ColumnHeader1 = New DevComponents.AdvTree.ColumnHeader()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.Line1 = New DevComponents.DotNetBar.Controls.Line()
-        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
-        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
-        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
-        Me.venta = New DevComponents.DotNetBar.LabelX()
-        Me.gasto = New DevComponents.DotNetBar.LabelX()
-        Me.pollos = New DevComponents.DotNetBar.LabelX()
-        Me.total = New DevComponents.DotNetBar.LabelX()
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
+        Me.total = New DevComponents.DotNetBar.LabelX()
+        Me.pollos = New DevComponents.DotNetBar.LabelX()
+        Me.gasto = New DevComponents.DotNetBar.LabelX()
+        Me.venta = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
+        Me.Line1 = New DevComponents.DotNetBar.Controls.Line()
         Me.QueriesTableAdapter1 = New PollosPioRico.pollosDataSetTableAdapters.QueriesTableAdapter()
         Me.GroupPanel1.SuspendLayout()
         Me.GroupPanel2.SuspendLayout()
@@ -97,26 +98,16 @@ Partial Class ingresos_egresos_mes
         Me.GroupPanel1.TabIndex = 0
         Me.GroupPanel1.Text = "Seleccionar Mes"
         '
-        'LabelX1
+        'ButtonX1
         '
-        Me.LabelX1.BackColor = System.Drawing.Color.WhiteSmoke
-        '
-        '
-        '
-        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX1.Location = New System.Drawing.Point(3, 3)
-        Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(75, 23)
-        Me.LabelX1.TabIndex = 0
-        Me.LabelX1.Text = "Mes:"
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.DisplayIndex = 1
-        Me.ColumnHeader1.Name = "ColumnHeader1"
-        Me.ColumnHeader1.Text = "Enero"
-        Me.ColumnHeader1.Width.Absolute = 150
+        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX1.Location = New System.Drawing.Point(331, 3)
+        Me.ButtonX1.Name = "ButtonX1"
+        Me.ButtonX1.Size = New System.Drawing.Size(75, 29)
+        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX1.TabIndex = 4
+        Me.ButtonX1.Text = "Mostrar"
         '
         'ComboBoxEx1
         '
@@ -156,17 +147,6 @@ Partial Class ingresos_egresos_mes
         '
         Me.Junio.Text = "Junio"
         '
-        'ButtonX1
-        '
-        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Location = New System.Drawing.Point(331, 3)
-        Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(75, 29)
-        Me.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX1.TabIndex = 4
-        Me.ButtonX1.Text = "Mostrar"
-        '
         'Julio
         '
         Me.Julio.Text = "Julio"
@@ -190,6 +170,27 @@ Partial Class ingresos_egresos_mes
         'Diciembre
         '
         Me.Diciembre.Text = "Diciembre"
+        '
+        'LabelX1
+        '
+        Me.LabelX1.BackColor = System.Drawing.Color.WhiteSmoke
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX1.Location = New System.Drawing.Point(3, 3)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(75, 23)
+        Me.LabelX1.TabIndex = 0
+        Me.LabelX1.Text = "Mes:"
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.DisplayIndex = 1
+        Me.ColumnHeader1.Name = "ColumnHeader1"
+        Me.ColumnHeader1.Text = "Enero"
+        Me.ColumnHeader1.Width.Absolute = 150
         '
         'GroupPanel2
         '
@@ -240,41 +241,79 @@ Partial Class ingresos_egresos_mes
         Me.GroupPanel2.TabIndex = 1
         Me.GroupPanel2.Text = "Ingresos - Egresos"
         '
-        'Line1
+        'ButtonX3
         '
-        Me.Line1.Location = New System.Drawing.Point(258, 146)
-        Me.Line1.Name = "Line1"
-        Me.Line1.Size = New System.Drawing.Size(223, 10)
-        Me.Line1.TabIndex = 0
-        Me.Line1.Text = "Line1"
+        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX3.Location = New System.Drawing.Point(446, 71)
+        Me.ButtonX3.Name = "ButtonX3"
+        Me.ButtonX3.Size = New System.Drawing.Size(108, 27)
+        Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX3.TabIndex = 9
+        Me.ButtonX3.Text = "Detalle Gastos"
         '
-        'LabelX2
+        'ButtonX2
         '
-        Me.LabelX2.BackColor = System.Drawing.Color.Transparent
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Location = New System.Drawing.Point(446, 34)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(108, 27)
+        Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ButtonX2.TabIndex = 8
+        Me.ButtonX2.Text = "Detalle Ventas"
         '
-        '
-        '
-        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX2.Location = New System.Drawing.Point(3, 34)
-        Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(110, 23)
-        Me.LabelX2.TabIndex = 1
-        Me.LabelX2.Text = "Total Ventas:"
-        '
-        'LabelX3
-        '
-        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
+        'total
         '
         '
         '
-        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelX3.Location = New System.Drawing.Point(3, 75)
-        Me.LabelX3.Name = "LabelX3"
-        Me.LabelX3.Size = New System.Drawing.Size(110, 23)
-        Me.LabelX3.TabIndex = 2
-        Me.LabelX3.Text = "Total Gastos:"
+        '
+        Me.total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.total.Location = New System.Drawing.Point(310, 162)
+        Me.total.Name = "total"
+        Me.total.Size = New System.Drawing.Size(96, 23)
+        Me.total.TabIndex = 7
+        Me.total.Text = "000000,00"
+        Me.total.TextAlignment = System.Drawing.StringAlignment.Far
+        '
+        'pollos
+        '
+        '
+        '
+        '
+        Me.pollos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.pollos.Location = New System.Drawing.Point(310, 114)
+        Me.pollos.Name = "pollos"
+        Me.pollos.Size = New System.Drawing.Size(96, 23)
+        Me.pollos.TabIndex = 6
+        Me.pollos.Text = "000000,00"
+        Me.pollos.TextAlignment = System.Drawing.StringAlignment.Far
+        '
+        'gasto
+        '
+        '
+        '
+        '
+        Me.gasto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.gasto.Location = New System.Drawing.Point(310, 75)
+        Me.gasto.Name = "gasto"
+        Me.gasto.Size = New System.Drawing.Size(96, 23)
+        Me.gasto.TabIndex = 5
+        Me.gasto.Text = "0000"
+        Me.gasto.TextAlignment = System.Drawing.StringAlignment.Far
+        '
+        'venta
+        '
+        '
+        '
+        '
+        Me.venta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.venta.Location = New System.Drawing.Point(310, 34)
+        Me.venta.Name = "venta"
+        Me.venta.Size = New System.Drawing.Size(96, 23)
+        Me.venta.TabIndex = 4
+        Me.venta.Text = "0000"
+        Me.venta.TextAlignment = System.Drawing.StringAlignment.Far
         '
         'LabelX4
         '
@@ -290,79 +329,41 @@ Partial Class ingresos_egresos_mes
         Me.LabelX4.TabIndex = 3
         Me.LabelX4.Text = "Total Compra Pollos:"
         '
-        'venta
+        'LabelX3
+        '
+        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
         '
         '
         '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX3.Location = New System.Drawing.Point(3, 75)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.Size = New System.Drawing.Size(110, 23)
+        Me.LabelX3.TabIndex = 2
+        Me.LabelX3.Text = "Total Gastos:"
         '
-        Me.venta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.venta.Location = New System.Drawing.Point(310, 34)
-        Me.venta.Name = "venta"
-        Me.venta.Size = New System.Drawing.Size(96, 23)
-        Me.venta.TabIndex = 4
-        Me.venta.Text = "0000"
-        Me.venta.TextAlignment = System.Drawing.StringAlignment.Far
+        'LabelX2
         '
-        'gasto
-        '
-        '
-        '
-        '
-        Me.gasto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.gasto.Location = New System.Drawing.Point(310, 75)
-        Me.gasto.Name = "gasto"
-        Me.gasto.Size = New System.Drawing.Size(96, 23)
-        Me.gasto.TabIndex = 5
-        Me.gasto.Text = "0000"
-        Me.gasto.TextAlignment = System.Drawing.StringAlignment.Far
-        '
-        'pollos
+        Me.LabelX2.BackColor = System.Drawing.Color.Transparent
         '
         '
         '
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX2.Location = New System.Drawing.Point(3, 34)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.Size = New System.Drawing.Size(110, 23)
+        Me.LabelX2.TabIndex = 1
+        Me.LabelX2.Text = "Total Ventas:"
         '
-        Me.pollos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.pollos.Location = New System.Drawing.Point(310, 114)
-        Me.pollos.Name = "pollos"
-        Me.pollos.Size = New System.Drawing.Size(96, 23)
-        Me.pollos.TabIndex = 6
-        Me.pollos.Text = "000000,00"
-        Me.pollos.TextAlignment = System.Drawing.StringAlignment.Far
+        'Line1
         '
-        'total
-        '
-        '
-        '
-        '
-        Me.total.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.total.Location = New System.Drawing.Point(310, 162)
-        Me.total.Name = "total"
-        Me.total.Size = New System.Drawing.Size(96, 23)
-        Me.total.TabIndex = 7
-        Me.total.Text = "000000,00"
-        Me.total.TextAlignment = System.Drawing.StringAlignment.Far
-        '
-        'ButtonX2
-        '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Location = New System.Drawing.Point(446, 34)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(108, 27)
-        Me.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX2.TabIndex = 8
-        Me.ButtonX2.Text = "Detalle Ventas"
-        '
-        'ButtonX3
-        '
-        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX3.Location = New System.Drawing.Point(446, 71)
-        Me.ButtonX3.Name = "ButtonX3"
-        Me.ButtonX3.Size = New System.Drawing.Size(108, 27)
-        Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ButtonX3.TabIndex = 9
-        Me.ButtonX3.Text = "Detalle Gastos"
+        Me.Line1.Location = New System.Drawing.Point(258, 146)
+        Me.Line1.Name = "Line1"
+        Me.Line1.Size = New System.Drawing.Size(223, 10)
+        Me.Line1.TabIndex = 0
+        Me.Line1.Text = "Line1"
         '
         'ingresos_egresos_mes
         '
@@ -373,6 +374,7 @@ Partial Class ingresos_egresos_mes
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ingresos_egresos_mes"
         Me.Text = "Ingresos - Egresos"

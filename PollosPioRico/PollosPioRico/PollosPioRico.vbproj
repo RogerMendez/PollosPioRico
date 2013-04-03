@@ -48,6 +48,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dapino-Cute-Chicken-Waving-chicken.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -78,6 +81,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bienvenida.Designer.vb">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="cliente_registrar.Designer.vb">
       <DependentUpon>cliente_registrar.vb</DependentUpon>
     </Compile>
@@ -175,6 +184,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Bienvenida.resx">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cliente_registrar.resx">
       <DependentUpon>cliente_registrar.vb</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +255,33 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-Chicken-egg-shell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-Chicken-egg-shell1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-New-born-chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-Waving-chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-Party-chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-Singing-chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dapino-Cute-Chicken-Chicken-egg-shell-top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dapino-Cute-Chicken-Waving-chicken.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

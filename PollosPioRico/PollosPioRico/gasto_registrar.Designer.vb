@@ -30,7 +30,6 @@ Partial Class gasto_registrar
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
         Me.DoubleInput1 = New DevComponents.Editors.DoubleInput()
         Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.GaugeControl1 = New DevComponents.Instrumentation.GaugeControl()
         Me.PollosDataSet = New PollosPioRico.pollosDataSet()
         Me.GastosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GastosTableAdapter = New PollosPioRico.pollosDataSetTableAdapters.gastosTableAdapter()
@@ -40,7 +39,6 @@ Partial Class gasto_registrar
         Precio_gastoLabel = New System.Windows.Forms.Label()
         Me.GroupPanel1.SuspendLayout()
         CType(Me.DoubleInput1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GaugeControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GastosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,10 +166,6 @@ Partial Class gasto_registrar
         '
         'GaugeControl1
         '
-        Me.GaugeControl1.Location = New System.Drawing.Point(0, 0)
-        Me.GaugeControl1.Name = "GaugeControl1"
-        Me.GaugeControl1.TabIndex = 0
-        '
         'PollosDataSet
         '
         Me.PollosDataSet.DataSetName = "pollosDataSet"
@@ -219,7 +213,6 @@ Partial Class gasto_registrar
         Me.GroupPanel1.ResumeLayout(False)
         Me.GroupPanel1.PerformLayout()
         CType(Me.DoubleInput1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GaugeControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GastosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -227,7 +220,6 @@ Partial Class gasto_registrar
 
     End Sub
     Friend WithEvents GroupPanel1 As DevComponents.DotNetBar.Controls.GroupPanel
-    Private WithEvents GaugeControl1 As DevComponents.Instrumentation.GaugeControl
     Friend WithEvents PollosDataSet As PollosPioRico.pollosDataSet
     Friend WithEvents GastosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents GastosTableAdapter As PollosPioRico.pollosDataSetTableAdapters.gastosTableAdapter

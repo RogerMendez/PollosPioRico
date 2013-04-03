@@ -24,11 +24,19 @@ Partial Class venta_registrar
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(venta_registrar))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.DoubleInput2 = New DevComponents.Editors.DoubleInput()
-        Me.DoubleInput1 = New DevComponents.Editors.DoubleInput()
+        Me.DataGridViewX1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
+        Me.CoddepoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnidadmedidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PreciounidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaingresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AlmacenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PollosDataSet = New PollosPioRico.pollosDataSet()
+        Me.DoubleInput2 = New DevComponents.Editors.DoubleInput()
+        Me.DoubleInput1 = New DevComponents.Editors.DoubleInput()
         Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
@@ -39,20 +47,13 @@ Partial Class venta_registrar
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.AlmacenTableAdapter = New PollosPioRico.pollosDataSetTableAdapters.almacenTableAdapter()
         Me.QueriesTableAdapter1 = New PollosPioRico.pollosDataSetTableAdapters.QueriesTableAdapter()
-        Me.DataGridViewX1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.CoddepoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnidadmedidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PreciounidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaingresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupPanel1.SuspendLayout()
-        CType(Me.DoubleInput2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DoubleInput1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlmacenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DoubleInput2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DoubleInput1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupPanel1
@@ -106,6 +107,95 @@ Partial Class venta_registrar
         Me.GroupPanel1.TabIndex = 0
         Me.GroupPanel1.Text = "Nueva Venta"
         '
+        'DataGridViewX1
+        '
+        Me.DataGridViewX1.AllowUserToAddRows = False
+        Me.DataGridViewX1.AllowUserToDeleteRows = False
+        Me.DataGridViewX1.AllowUserToOrderColumns = True
+        Me.DataGridViewX1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridViewX1.AutoGenerateColumns = False
+        Me.DataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridViewX1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CoddepoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.UnidadmedidaDataGridViewTextBoxColumn, Me.PreciounidadDataGridViewTextBoxColumn, Me.StockDataGridViewTextBoxColumn, Me.FechaingresoDataGridViewTextBoxColumn})
+        Me.DataGridViewX1.DataSource = Me.AlmacenBindingSource
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewX1.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewX1.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.DataGridViewX1.Location = New System.Drawing.Point(3, 108)
+        Me.DataGridViewX1.MultiSelect = False
+        Me.DataGridViewX1.Name = "DataGridViewX1"
+        Me.DataGridViewX1.ReadOnly = True
+        Me.DataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewX1.Size = New System.Drawing.Size(771, 261)
+        Me.DataGridViewX1.TabIndex = 9
+        '
+        'CoddepoDataGridViewTextBoxColumn
+        '
+        Me.CoddepoDataGridViewTextBoxColumn.DataPropertyName = "cod_depo"
+        Me.CoddepoDataGridViewTextBoxColumn.HeaderText = "Codigo"
+        Me.CoddepoDataGridViewTextBoxColumn.Name = "CoddepoDataGridViewTextBoxColumn"
+        Me.CoddepoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CoddepoDataGridViewTextBoxColumn.Width = 85
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 116
+        '
+        'UnidadmedidaDataGridViewTextBoxColumn
+        '
+        Me.UnidadmedidaDataGridViewTextBoxColumn.DataPropertyName = "unidad_medida"
+        Me.UnidadmedidaDataGridViewTextBoxColumn.HeaderText = "Medida"
+        Me.UnidadmedidaDataGridViewTextBoxColumn.Name = "UnidadmedidaDataGridViewTextBoxColumn"
+        Me.UnidadmedidaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UnidadmedidaDataGridViewTextBoxColumn.Width = 87
+        '
+        'PreciounidadDataGridViewTextBoxColumn
+        '
+        Me.PreciounidadDataGridViewTextBoxColumn.DataPropertyName = "precio_unidad"
+        Me.PreciounidadDataGridViewTextBoxColumn.HeaderText = "Precio (Kg)"
+        Me.PreciounidadDataGridViewTextBoxColumn.Name = "PreciounidadDataGridViewTextBoxColumn"
+        Me.PreciounidadDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PreciounidadDataGridViewTextBoxColumn.Width = 110
+        '
+        'StockDataGridViewTextBoxColumn
+        '
+        Me.StockDataGridViewTextBoxColumn.DataPropertyName = "Stock"
+        Me.StockDataGridViewTextBoxColumn.HeaderText = "Stock"
+        Me.StockDataGridViewTextBoxColumn.Name = "StockDataGridViewTextBoxColumn"
+        Me.StockDataGridViewTextBoxColumn.ReadOnly = True
+        Me.StockDataGridViewTextBoxColumn.Width = 73
+        '
+        'FechaingresoDataGridViewTextBoxColumn
+        '
+        Me.FechaingresoDataGridViewTextBoxColumn.DataPropertyName = "fecha_ingreso"
+        Me.FechaingresoDataGridViewTextBoxColumn.HeaderText = "Fecha Ingreso"
+        Me.FechaingresoDataGridViewTextBoxColumn.Name = "FechaingresoDataGridViewTextBoxColumn"
+        Me.FechaingresoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.FechaingresoDataGridViewTextBoxColumn.Width = 131
+        '
+        'AlmacenBindingSource
+        '
+        Me.AlmacenBindingSource.DataMember = "almacen"
+        Me.AlmacenBindingSource.DataSource = Me.PollosDataSet
+        '
+        'PollosDataSet
+        '
+        Me.PollosDataSet.DataSetName = "pollosDataSet"
+        Me.PollosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'DoubleInput2
         '
         '
@@ -135,16 +225,6 @@ Partial Class venta_registrar
         Me.DoubleInput1.ShowUpDown = True
         Me.DoubleInput1.Size = New System.Drawing.Size(217, 29)
         Me.DoubleInput1.TabIndex = 4
-        '
-        'AlmacenBindingSource
-        '
-        Me.AlmacenBindingSource.DataMember = "almacen"
-        Me.AlmacenBindingSource.DataSource = Me.PollosDataSet
-        '
-        'PollosDataSet
-        '
-        Me.PollosDataSet.DataSetName = "pollosDataSet"
-        Me.PollosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ButtonX3
         '
@@ -246,85 +326,6 @@ Partial Class venta_registrar
         '
         Me.AlmacenTableAdapter.ClearBeforeFill = True
         '
-        'DataGridViewX1
-        '
-        Me.DataGridViewX1.AllowUserToAddRows = False
-        Me.DataGridViewX1.AllowUserToDeleteRows = False
-        Me.DataGridViewX1.AllowUserToOrderColumns = True
-        Me.DataGridViewX1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridViewX1.AutoGenerateColumns = False
-        Me.DataGridViewX1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.DataGridViewX1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewX1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CoddepoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.UnidadmedidaDataGridViewTextBoxColumn, Me.PreciounidadDataGridViewTextBoxColumn, Me.StockDataGridViewTextBoxColumn, Me.FechaingresoDataGridViewTextBoxColumn})
-        Me.DataGridViewX1.DataSource = Me.AlmacenBindingSource
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewX1.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewX1.GridColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.DataGridViewX1.Location = New System.Drawing.Point(3, 108)
-        Me.DataGridViewX1.MultiSelect = False
-        Me.DataGridViewX1.Name = "DataGridViewX1"
-        Me.DataGridViewX1.ReadOnly = True
-        Me.DataGridViewX1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewX1.Size = New System.Drawing.Size(771, 261)
-        Me.DataGridViewX1.TabIndex = 9
-        '
-        'CoddepoDataGridViewTextBoxColumn
-        '
-        Me.CoddepoDataGridViewTextBoxColumn.DataPropertyName = "cod_depo"
-        Me.CoddepoDataGridViewTextBoxColumn.HeaderText = "Codigo"
-        Me.CoddepoDataGridViewTextBoxColumn.Name = "CoddepoDataGridViewTextBoxColumn"
-        Me.CoddepoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CoddepoDataGridViewTextBoxColumn.Width = 85
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "Descripción"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DescripcionDataGridViewTextBoxColumn.Width = 116
-        '
-        'UnidadmedidaDataGridViewTextBoxColumn
-        '
-        Me.UnidadmedidaDataGridViewTextBoxColumn.DataPropertyName = "unidad_medida"
-        Me.UnidadmedidaDataGridViewTextBoxColumn.HeaderText = "Medida"
-        Me.UnidadmedidaDataGridViewTextBoxColumn.Name = "UnidadmedidaDataGridViewTextBoxColumn"
-        Me.UnidadmedidaDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UnidadmedidaDataGridViewTextBoxColumn.Width = 87
-        '
-        'PreciounidadDataGridViewTextBoxColumn
-        '
-        Me.PreciounidadDataGridViewTextBoxColumn.DataPropertyName = "precio_unidad"
-        Me.PreciounidadDataGridViewTextBoxColumn.HeaderText = "Precio (Kg)"
-        Me.PreciounidadDataGridViewTextBoxColumn.Name = "PreciounidadDataGridViewTextBoxColumn"
-        Me.PreciounidadDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PreciounidadDataGridViewTextBoxColumn.Width = 101
-        '
-        'StockDataGridViewTextBoxColumn
-        '
-        Me.StockDataGridViewTextBoxColumn.DataPropertyName = "Stock"
-        Me.StockDataGridViewTextBoxColumn.HeaderText = "Stock"
-        Me.StockDataGridViewTextBoxColumn.Name = "StockDataGridViewTextBoxColumn"
-        Me.StockDataGridViewTextBoxColumn.ReadOnly = True
-        Me.StockDataGridViewTextBoxColumn.Width = 73
-        '
-        'FechaingresoDataGridViewTextBoxColumn
-        '
-        Me.FechaingresoDataGridViewTextBoxColumn.DataPropertyName = "fecha_ingreso"
-        Me.FechaingresoDataGridViewTextBoxColumn.HeaderText = "Fecha Ingreso"
-        Me.FechaingresoDataGridViewTextBoxColumn.Name = "FechaingresoDataGridViewTextBoxColumn"
-        Me.FechaingresoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.FechaingresoDataGridViewTextBoxColumn.Width = 120
-        '
         'venta_registrar
         '
         Me.AcceptButton = Me.ButtonX1
@@ -335,17 +336,18 @@ Partial Class venta_registrar
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "venta_registrar"
         Me.Text = "Registrar Venta"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupPanel1.ResumeLayout(False)
-        CType(Me.DoubleInput2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DoubleInput1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlmacenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PollosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DoubleInput2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DoubleInput1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridViewX1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
