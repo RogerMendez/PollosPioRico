@@ -43,9 +43,9 @@ Partial Class Bienvenida
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(241, 290)
+        Me.ProgressBar1.Location = New System.Drawing.Point(180, 290)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(202, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(334, 23)
         Me.ProgressBar1.TabIndex = 1
         '
         'Timer1
@@ -55,7 +55,7 @@ Partial Class Bienvenida
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(317, 326)
+        Me.Label1.Location = New System.Drawing.Point(318, 334)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 2
