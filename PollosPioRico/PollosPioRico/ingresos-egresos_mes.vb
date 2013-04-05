@@ -21,4 +21,20 @@ Public Class ingresos_egresos_mes
         total.Text = totalventa - (totalgasto + totalpollos)
         'MessageBox.Show(ComboBoxEx1.Text + vbCrLf + ComboBoxEx1.SelectedIndex.ToString)
     End Sub
+
+    Private Sub ButtonX2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX2.Click
+        'detalle de ventas
+        reporte_venta.mes = ComboBoxEx1.SelectedIndex + 1
+
+        reporte_venta.anho = 2013
+        reporte_venta.ShowDialog()
+
+    End Sub
+
+    Private Sub ButtonX3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonX3.Click
+        'detalle de gastos
+        Reporte_Gasto.mes = ComboBoxEx1.SelectedIndex + 1
+        Reporte_Gasto.anho = 2013
+        Reporte_Gasto.ShowDialog()
+    End Sub
 End Class
