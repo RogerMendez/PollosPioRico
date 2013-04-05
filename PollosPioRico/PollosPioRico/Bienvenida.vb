@@ -8,9 +8,9 @@ Public Class Bienvenida
         If ProgressBar1.Value = 100 Then
             Me.Opacity -= 0.07
             If Me.Opacity = 0.0 Then
-                Me.Hide()
                 Inicioform.Show()
                 Timer1.Enabled = False
+                Me.Close()
             End If
         Else
             ProgressBar1.Value += 2
